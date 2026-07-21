@@ -1,0 +1,270 @@
+/* =====================================================
+   UNIVERSAL RESPONSIVE CSS
+   Works for Admin, Teacher, Student, Parent,
+   Login, Dashboard, Inventory, Transport,
+   Learning Hub, Store, Quiz, etc.
+=====================================================*/
+
+/* Prevent horizontal scrolling */
+
+*{
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+/* Images */
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* Videos */
+
+video{
+    max-width:100%;
+}
+
+/* Tables */
+
+table{
+    width:100%;
+}
+
+.table-responsive{
+    overflow-x:auto;
+}
+
+/* Forms */
+
+input,
+select,
+textarea,
+button{
+    max-width:100%;
+}
+
+/* Cards */
+
+.card,
+.dashboard-card,
+.glass-card,
+.analytics-card,
+.stat-card{
+    width:100%;
+}
+
+/* Grid */
+
+.dashboard-grid,
+.stats-grid,
+.analytics-grid,
+.form-grid{
+    display:grid;
+    gap:20px;
+}
+
+/* ===========================================
+             TABLET
+===========================================*/
+
+@media (max-width:1024px){
+
+.sidebar{
+    width:220px;
+}
+
+.main-content{
+    margin-left:220px;
+    width:calc(100% - 220px);
+}
+
+.dashboard-grid,
+.stats-grid,
+.analytics-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.form-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.topbar{
+    flex-wrap:wrap;
+}
+
+}
+
+/* ===========================================
+             MOBILE
+===========================================*/
+
+@media (max-width:768px){
+
+.sidebar{
+
+position:fixed;
+left:-260px;
+top:0;
+width:250px;
+height:100vh;
+z-index:1000;
+transition:.3s;
+
+}
+
+.sidebar.active{
+
+left:0;
+
+}
+
+.main-content{
+
+margin-left:0;
+width:100%;
+padding:15px;
+
+}
+
+.dashboard-grid,
+.stats-grid,
+.analytics-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.form-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.topbar{
+
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
+
+}
+
+.topbar-right{
+
+width:100%;
+justify-content:space-between;
+
+}
+
+.card,
+.dashboard-card,
+.analytics-card,
+.glass-card,
+.stat-card{
+
+padding:15px;
+
+}
+
+table{
+
+display:block;
+overflow-x:auto;
+white-space:nowrap;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+.action-btn{
+
+width:100%;
+margin-bottom:10px;
+
+}
+
+input,
+select,
+textarea{
+
+width:100%;
+
+}
+
+}
+
+/* ===========================================
+          SMALL MOBILE
+===========================================*/
+
+@media (max-width:480px){
+
+body{
+
+font-size:14px;
+
+}
+
+h1{
+
+font-size:24px;
+
+}
+
+h2{
+
+font-size:20px;
+
+}
+
+h3{
+
+font-size:18px;
+
+}
+
+.card,
+.dashboard-card,
+.analytics-card,
+.glass-card,
+.stat-card{
+
+padding:12px;
+
+}
+
+.main-content{
+
+padding:10px;
+
+}
+
+.topbar{
+
+gap:8px;
+
+}
+
+button{
+
+font-size:14px;
+
+padding:10px;
+
+}
+
+}
