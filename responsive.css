@@ -1,13 +1,13 @@
-/* =====================================================
+/* ==========================================================
    UNIVERSAL RESPONSIVE CSS
-   Works for Admin, Teacher, Student, Parent,
-   Login, Dashboard, Inventory, Transport,
-   Learning Hub, Store, Quiz, etc.
-=====================================================*/
+   MAIAMMA SCHOOL ERP
+   Safe Override File
+   Keep ALL existing HTML/CSS unchanged
+========================================================== */
 
-/* Prevent horizontal scrolling */
-
-*{
+*,
+*::before,
+*::after{
     box-sizing:border-box;
 }
 
@@ -19,14 +19,50 @@ body{
 
 /* Images */
 
-img{
+img,
+video{
     max-width:100%;
     height:auto;
+    display:block;
 }
 
-/* Videos */
+/* Containers */
 
-video{
+.container,
+.main-content,
+.content,
+.page-content,
+.dashboard-container{
+    max-width:100%;
+}
+
+/* Cards */
+
+.card,
+.dashboard-card,
+.analytics-card,
+.glass-card,
+.stat-card,
+.profile-card,
+.table-card,
+.wide-card{
+    width:100%;
+    max-width:100%;
+}
+
+/* Forms */
+
+input,
+select,
+textarea{
+    width:100%;
+    max-width:100%;
+}
+
+button,
+.action-btn,
+.primary-btn,
+.secondary-btn{
     max-width:100%;
 }
 
@@ -40,182 +76,221 @@ table{
     overflow-x:auto;
 }
 
-/* Forms */
-
-input,
-select,
-textarea,
-button{
-    max-width:100%;
+table{
+    min-width:600px;
 }
 
-/* Cards */
+/* ===========================
+        TABLET
+=========================== */
 
-.card,
-.dashboard-card,
-.glass-card,
-.analytics-card,
-.stat-card{
-    width:100%;
+@media (max-width:1024px){
+
+.main-content{
+    padding:20px;
 }
-
-/* Grid */
 
 .dashboard-grid,
 .stats-grid,
 .analytics-grid,
-.form-grid{
-    display:grid;
-    gap:20px;
-}
-
-/* ===========================================
-             TABLET
-===========================================*/
-
-@media (max-width:1024px){
-
-.sidebar{
-    width:220px;
-}
-
-.main-content{
-    margin-left:220px;
-    width:calc(100% - 220px);
-}
-
-.dashboard-grid,
-.stats-grid,
-.analytics-grid{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-.form-grid{
-
-grid-template-columns:1fr;
-
+.form-grid,
+.badge-grid,
+.future-grid,
+.student-info-grid{
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 }
 
 .topbar{
     flex-wrap:wrap;
+    gap:15px;
 }
 
 }
 
-/* ===========================================
-             MOBILE
-===========================================*/
+/* ===========================
+        MOBILE
+=========================== */
 
 @media (max-width:768px){
 
+body{
+    font-size:15px;
+}
+
+/* Sidebar becomes top section */
+
 .sidebar{
 
-position:fixed;
-left:-260px;
-top:0;
-width:250px;
-height:100vh;
-z-index:1000;
-transition:.3s;
+position:relative !important;
+
+width:100% !important;
+
+height:auto !important;
+
+left:0 !important;
+
+top:0 !important;
+
+min-height:auto !important;
+
+padding:15px !important;
+
+border-right:none !important;
 
 }
 
-.sidebar.active{
+/* Menu */
 
-left:0;
+.sidebar-menu{
+
+display:flex;
+
+overflow-x:auto;
+
+gap:10px;
+
+padding-bottom:8px;
 
 }
+
+.sidebar-menu li{
+
+margin:0;
+
+flex:none;
+
+}
+
+.sidebar-menu li a{
+
+white-space:nowrap;
+
+padding:12px 16px;
+
+}
+
+/* Main */
 
 .main-content{
 
-margin-left:0;
-width:100%;
-padding:15px;
+margin-left:0 !important;
+
+width:100% !important;
+
+padding:15px !important;
 
 }
 
-.dashboard-grid,
-.stats-grid,
-.analytics-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.form-grid{
-
-grid-template-columns:1fr;
-
-}
+/* Topbar */
 
 .topbar{
 
 display:flex;
+
 flex-direction:column;
+
 align-items:flex-start;
-gap:10px;
+
+gap:15px;
 
 }
 
 .topbar-right{
 
 width:100%;
+
+display:flex;
+
 justify-content:space-between;
+
+flex-wrap:wrap;
+
+gap:10px;
 
 }
 
-.card,
+/* Grids */
+
+.dashboard-grid,
+.stats-grid,
+.analytics-grid,
+.form-grid,
+.badge-grid,
+.future-grid,
+.student-info-grid{
+
+grid-template-columns:1fr !important;
+
+}
+
+/* Cards */
+
+.student-profile-card,
+.teacher-profile-card,
+.profile-card{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
 .dashboard-card,
 .analytics-card,
 .glass-card,
-.stat-card{
+.stat-card,
+.card{
 
-padding:15px;
+padding:18px;
 
 }
+
+.wide-card{
+
+grid-column:auto !important;
+
+}
+
+/* Buttons */
+
+button,
+.action-btn,
+.primary-btn,
+.secondary-btn{
+
+width:100%;
+
+}
+
+/* Tables */
 
 table{
 
 display:block;
+
 overflow-x:auto;
+
 white-space:nowrap;
 
 }
 
-button{
-
-width:100%;
-
 }
 
-.action-btn{
-
-width:100%;
-margin-bottom:10px;
-
-}
-
-input,
-select,
-textarea{
-
-width:100%;
-
-}
-
-}
-
-/* ===========================================
-          SMALL MOBILE
-===========================================*/
+/* ===========================
+      SMALL MOBILE
+=========================== */
 
 @media (max-width:480px){
 
 body{
 
 font-size:14px;
+
+}
+
+.main-content{
+
+padding:12px !important;
 
 }
 
@@ -237,33 +312,21 @@ font-size:18px;
 
 }
 
-.card,
 .dashboard-card,
 .analytics-card,
 .glass-card,
-.stat-card{
+.stat-card,
+.card{
 
-padding:12px;
-
-}
-
-.main-content{
-
-padding:10px;
-
-}
-
-.topbar{
-
-gap:8px;
+padding:15px;
 
 }
 
 button{
 
-font-size:14px;
+padding:12px;
 
-padding:10px;
+font-size:14px;
 
 }
 
