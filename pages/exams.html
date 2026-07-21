@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Exams | MAIAMMA Teacher Hub</title>
+
+  <link rel="stylesheet" href="exams.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+  <aside class="sidebar">
+    <div class="brand">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <div>
+        <b>MAIAMMA</b>
+        <small>Teacher Hub</small>
+      </div>
+    </div>
+
+    <nav>
+      <a href="../teacher-dashboard.html">
+        <i class="fa-solid fa-house"></i>Dashboard
+      </a>
+
+      <a href="attendance.html">
+        <i class="fa-solid fa-calendar-check"></i>Attendance
+      </a>
+
+      <a href="homework.html">
+        <i class="fa-solid fa-book-open"></i>Homework
+      </a>
+
+      <a href="assignments.html">
+        <i class="fa-solid fa-clipboard-list"></i>Assignments
+      </a>
+
+      <a class="active" href="exams.html">
+        <i class="fa-solid fa-file-alt"></i>Exams
+      </a>
+
+      <a href="students.html">
+        <i class="fa-solid fa-users"></i>Students
+      </a>
+
+      <li class="plain-link">
+        <i class="fa-solid fa-comments"></i>Parent Chat
+      </li>
+
+      <a href="reports.html">
+        <i class="fa-solid fa-chart-line"></i>Reports
+      </a>
+
+      <li class="plain-link">
+        <i class="fa-solid fa-robot"></i>AI Assistant
+      </li>
+
+      <a href="../teacher-dashboard.html">
+        <i class="fa-solid fa-arrow-left"></i>Back Dashboard
+      </a>
+    </nav>
+  </aside>
+
+  <main>
+    <header>
+      <div>
+        <p class="eyebrow">TEACHER HUB</p>
+        <h1>Examination Management</h1>
+        <p class="muted">Create exams and view the upcoming examination schedule.</p>
+      </div>
+
+      <button id="showForm" class="primary">
+        <i class="fa-solid fa-plus"></i> Add Exam
+      </button>
+    </header>
+
+    <section id="formCard" class="card hidden">
+      <div class="card-title">
+        <h2>Create New Exam</h2>
+
+        <button id="closeForm" class="icon-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form id="examForm" class="form-grid">
+
+        <label>
+          Exam Name
+          <input id="examName" placeholder="e.g. Unit Test 1" required>
+        </label>
+
+        <label>
+          Subject
+          <input id="subject" placeholder="e.g. Mathematics" required>
+        </label>
+
+        <label>
+          Class
+          <select id="className" required>
+            <option value="">Select class</option>
+            <option>8-C</option>
+            <option>9-A</option>
+            <option>10-B</option>
+          </select>
+        </label>
+
+        <label>
+          Exam Date
+          <input id="examDate" type="date" required>
+        </label>
+
+        <label>
+          Maximum Marks
+          <input id="maxMarks" type="number" min="1" placeholder="e.g. 50" required>
+        </label>
+
+        <label>
+          Duration
+          <input id="duration" placeholder="e.g. 60 Minutes" required>
+        </label>
+
+        <button type="submit" class="primary">
+          Save Exam
+        </button>
+
+      </form>
+    </section>
+
+    <section class="summary">
+      <article>
+        <i class="fa-solid fa-file-alt"></i>
+        <b id="totalExams">0</b>
+        <span>Total Exams</span>
+      </article>
+
+      <article>
+        <i class="fa-solid fa-calendar-day"></i>
+        <b id="upcomingExams">0</b>
+        <span>Upcoming Exams</span>
+      </article>
+
+      <article>
+        <i class="fa-solid fa-book-open"></i>
+        <b id="subjectsCount">0</b>
+        <span>Subjects</span>
+      </article>
+    </section>
+
+    <section class="card">
+      <div class="card-title">
+        <h2>Exam Schedule</h2>
+        <input id="searchExam" placeholder="Search exam or subject">
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Exam</th>
+              <th>Subject</th>
+              <th>Class</th>
+              <th>Date</th>
+              <th>Marks</th>
+              <th>Duration</th>
+            </tr>
+          </thead>
+
+          <tbody id="examRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <p id="notice" role="status"></p>
+  </main>
+
+  <script src="exams.js"></script>
+</body>
+</html>

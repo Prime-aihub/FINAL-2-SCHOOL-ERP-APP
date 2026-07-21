@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MAIAMMA School Store</title>
+
+  <link rel="stylesheet" href="store.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="../teacher-dashboard.html">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <span>MAIAMMA <small>School Store</small></span>
+    </a>
+
+    <nav>
+      <a href="../teacher-dashboard.html">Dashboard</a>
+      <a href="attendance.html">Teacher Hub</a>
+    </nav>
+
+    <button id="cartButton" class="cart-button">
+      <i class="fa-solid fa-cart-shopping"></i>
+      Cart <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-content">
+        <p>MAIAMMA SCHOOL STORE</p>
+        <h1>Everything students need to learn, create and explore.</h1>
+        <span>Educational toys, STEM kits, stationery and custom school bags.</span>
+        <button id="shopNow">Shop Now</button>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div><i class="fa-solid fa-truck"></i><span><b>Easy Delivery</b>School-ready products</span></div>
+      <div><i class="fa-solid fa-shield-heart"></i><span><b>Quality Checked</b>Safe learning materials</span></div>
+      <div><i class="fa-solid fa-graduation-cap"></i><span><b>Made for Students</b>Useful and affordable</span></div>
+    </section>
+
+    <section class="shop-header" id="products">
+      <div>
+        <p class="eyebrow">SHOP BY CATEGORY</p>
+        <h2>Learning Essentials</h2>
+      </div>
+
+      <input id="searchProduct" placeholder="Search products...">
+    </section>
+
+    <section class="categories">
+      <button class="category active" data-category="All">All Products</button>
+      <button class="category" data-category="Stationery">Stationery</button>
+      <button class="category" data-category="Educational Toys">Educational Toys</button>
+      <button class="category" data-category="STEM Kits">STEM Kits</button>
+      <button class="category" data-category="School Bags">School Bags</button>
+    </section>
+
+    <section id="productGrid" class="product-grid"></section>
+
+  </main>
+
+  <aside id="cartPanel" class="cart-panel">
+    <div class="cart-head">
+      <h2>Your Cart</h2>
+      <button id="closeCart"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-footer">
+      <p>Total <b id="cartTotal">₹0</b></p>
+      <button id="checkout">Checkout Later</button>
+    </div>
+  </aside>
+
+  <div id="overlay" class="overlay"></div>
+
+  <footer>
+    <b>MAIAMMA School Store</b>
+    <span>Learning supplies for curious minds.</span>
+  </footer>
+
+  <script src="store.js"></script>
+</body>
+</html>

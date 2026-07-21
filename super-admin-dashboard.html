@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIAMMA School Hub | Super Admin Dashboard</title>
+
+    <link rel="stylesheet" href="super-admin-dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-header">
+
+        <div class="logo-box">
+            <i class="fas fa-crown"></i>
+        </div>
+
+        <div>
+            <h2>MAIAMMA</h2>
+            <p>Super Admin</p>
+        </div>
+
+    </div>
+
+    <ul class="sidebar-menu">
+
+        <li class="active">
+            <a href="#">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-school"></i>
+                <span>Schools</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-palette"></i>
+                <span>White Label</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-wallet"></i>
+                <span>Revenue</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-credit-card"></i>
+                <span>Subscriptions</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-brain"></i>
+                <span>AI Ecosystem</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="stem-ecosystem.html" class="action-btn">
+    🚀 STEM Ecosystem
+</a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-globe"></i>
+                <span>Website Builder</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-chart-line"></i>
+                <span>Analytics</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-shield-alt"></i>
+                <span>Security</span>
+            </a>
+        </li>
+
+    </ul>
+
+</aside>
+
+<!-- MAIN CONTENT -->
+
+<main class="main-content">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <div>
+            <h1>Super Admin Control Center</h1>
+            <p>MAIAMMA Global Platform Management</p>
+        </div>
+
+        <div class="topbar-right">
+
+            <button id="themeToggle" class="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <div class="admin-profile">
+
+                <img src="https://i.pravatar.cc/200?img=60">
+
+                <div>
+                    <h4>Super Administrator</h4>
+                    <span>Platform Owner</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- KPI CARDS -->
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+            <i class="fas fa-school"></i>
+            <h2>245</h2>
+            <p>Total Schools</p>
+        </div>
+
+        <div class="stat-card">
+            <i class="fas fa-user-graduate"></i>
+            <h2>185,420</h2>
+            <p>Total Students</p>
+        </div>
+
+        <div class="stat-card">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h2>12,845</h2>
+            <p>Total Teachers</p>
+        </div>
+
+        <div class="stat-card">
+            <i class="fas fa-wallet"></i>
+            <h2>₹2.8 Cr</h2>
+            <p>Annual Revenue</p>
+        </div>
+
+    </section>
+
+    <!-- DASHBOARD GRID -->
+
+    <section class="dashboard-grid">
+
+        <!-- SCHOOL MANAGEMENT -->
+
+        <div class="dashboard-card">
+
+            <div class="card-header">
+                <h3>School Management</h3>
+                <i class="fas fa-school"></i>
+            </div>
+
+            <p>Active Schools: 245</p>
+            <p>New This Month: 18</p>
+            <p>Pending Approvals: 7</p>
+
+            <button class="action-btn">
+                Manage Schools
+            </button>
+
+        </div>
+
+        <!-- SUBSCRIPTIONS -->
+
+        <div class="dashboard-card">
+
+            <div class="card-header">
+                <h3>Subscriptions</h3>
+                <i class="fas fa-credit-card"></i>
+            </div>
+
+            <p>Premium: 142</p>
+            <p>Enterprise: 56</p>
+            <p>Renewals Due: 11</p>
+
+            <button class="action-btn">
+                Manage Plans
+            </button>
+
+        </div>
+
+        <!-- REVENUE -->
+
+        <div class="dashboard-card">
+
+            <div class="card-header">
+                <h3>Revenue Overview</h3>
+                <i class="fas fa-wallet"></i>
+            </div>
+
+            <p>School ERP: ₹1.4 Cr</p>
+            <p>White Label: ₹65 Lakh</p>
+            <p>Store Revenue: ₹48 Lakh</p>
+
+        </div>
+
+        <!-- AI ECOSYSTEM -->
+
+        <div class="dashboard-card">
+
+            <div class="card-header">
+                <h3>AI Ecosystem</h3>
+                <i class="fas fa-brain"></i>
+            </div>
+
+            <p>AI Tutor Sessions: 42,500</p>
+            <p>Parent AI Queries: 28,400</p>
+            <p>Teacher AI Usage: 14,700</p>
+
+        </div>
+
+        <!-- WHITE LABEL -->
+
+        <div class="dashboard-card wide-card">
+
+            <div class="card-header">
+                <h3>White Label Schools</h3>
+                <i class="fas fa-palette"></i>
+            </div>
+
+            <table class="super-table">
+
+                <thead>
+                    <tr>
+                        <th>School</th>
+                        <th>Plan</th>
+                        <th>Status</th>
+                        <th>Domain</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>ABC Public School</td>
+                        <td>Enterprise</td>
+                        <td>Active</td>
+                        <td>abcschool.app</td>
+                    </tr>
+
+                    <tr>
+                        <td>Sunrise Academy</td>
+                        <td>Premium</td>
+                        <td>Active</td>
+                        <td>sunrisehub.app</td>
+                    </tr>
+
+                    <tr>
+                        <td>Future Kids School</td>
+                        <td>Premium</td>
+                        <td>Renewal Due</td>
+                        <td>futurekids.app</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- STEM -->
+
+        <div class="dashboard-card">
+
+            <div class="card-header">
+                <h3>STEM Ecosystem</h3>
+                <i class="fas fa-cube"></i>
+            </div>
+
+            <p>STEM Kit Orders: 1,280</p>
+            <p>AI Kit Orders: 945</p>
+            <p>Lab Access Users: 7,500</p>
+
+        </div>
+
+        <!-- WEBSITE BUILDER -->
+
+        <div class="dashboard-card">
+
+            <div class="card-header">
+                <h3>Website Builder</h3>
+                <i class="fas fa-globe"></i>
+            </div>
+
+            <p>Live Websites: 188</p>
+            <p>Domains Connected: 162</p>
+            <p>Pending Setups: 9</p>
+
+        </div>
+
+        <!-- ANALYTICS -->
+
+        <div class="dashboard-card wide-card">
+
+            <div class="card-header">
+                <h3>Platform Analytics</h3>
+                <i class="fas fa-chart-line"></i>
+            </div>
+
+            <div class="analytics-grid">
+
+                <div class="analytics-box">
+                    Attendance
+                    <strong>96%</strong>
+                </div>
+
+                <div class="analytics-box">
+                    Academic Growth
+                    <strong>89%</strong>
+                </div>
+
+                <div class="analytics-box">
+                    Parent Engagement
+                    <strong>94%</strong>
+                </div>
+
+                <div class="analytics-box">
+                    AI Adoption
+                    <strong>91%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- AI SUPER ADMIN -->
+
+        <div class="dashboard-card wide-card">
+
+            <div class="card-header">
+                <h3>AI Super Administrator</h3>
+                <i class="fas fa-robot"></i>
+            </div>
+
+            <div class="ai-chat">
+
+                <div class="ai-message">
+                    Hello Super Admin 👑. I can provide platform insights, revenue forecasts and school performance recommendations.
+                </div>
+
+                <input
+                    type="text"
+                    placeholder="Ask AI about platform growth, revenue, subscriptions..."
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="super-admin-dashboard.js"></script>
+
+</body>
+</html>

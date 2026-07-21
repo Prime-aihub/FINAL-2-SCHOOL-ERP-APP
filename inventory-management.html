@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAIAMMA Inventory Management</title>
+<link rel="stylesheet" href="inventory-management.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div>
+        <h1>📦 Inventory Management</h1>
+        <p>School Store Inventory Control Center</p>
+    </div>
+
+    <button id="themeToggle" class="theme-btn">
+        🌙 Theme
+    </button>
+
+</header>
+
+<main class="container">
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+            <h3>Total Products</h3>
+            <h2>2,584</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>Available Stock</h3>
+            <h2>18,420</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>Low Stock Items</h3>
+            <h2>42</h2>
+        </div>
+
+        <div class="stat-card danger">
+            <h3>Out Of Stock</h3>
+            <h2>11</h2>
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Inventory Categories</h2>
+
+        <div class="category-grid">
+
+            <div class="category-card">📚 Books Inventory</div>
+            <div class="category-card">👔 Uniform Inventory</div>
+            <div class="category-card">🎒 Bags Inventory</div>
+            <div class="category-card">✏️ Stationery Inventory</div>
+            <div class="category-card">🧪 STEM Kits</div>
+            <div class="category-card">🤖 AI Learning Kits</div>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Current Stock Overview</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Stock</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Class 8 Science Book</td>
+                    <td>Books</td>
+                    <td>325</td>
+                    <td><span class="good">Healthy</span></td>
+                </tr>
+
+                <tr>
+                    <td>School Uniform M</td>
+                    <td>Uniform</td>
+                    <td>14</td>
+                    <td><span class="warning">Low Stock</span></td>
+                </tr>
+
+                <tr>
+                    <td>School Bag Premium</td>
+                    <td>Bags</td>
+                    <td>0</td>
+                    <td><span class="danger-text">Out Of Stock</span></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Purchase Orders</h2>
+
+        <div class="purchase-grid">
+
+            <div class="purchase-card">
+                <h3>PO-2026-101</h3>
+                <p>Books Supplier</p>
+                <span>Pending Approval</span>
+            </div>
+
+            <div class="purchase-card">
+                <h3>PO-2026-102</h3>
+                <p>Uniform Supplier</p>
+                <span>Delivered</span>
+            </div>
+
+            <div class="purchase-card">
+                <h3>PO-2026-103</h3>
+                <p>STEM Supplier</p>
+                <span>Processing</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Low Stock Alerts</h2>
+
+        <div class="alerts">
+
+            <div class="alert">
+                ⚠ School Uniform Size M below minimum threshold
+            </div>
+
+            <div class="alert">
+                ⚠ Robotics Starter Kit stock critically low
+            </div>
+
+            <div class="alert">
+                ⚠ School Bag Premium unavailable
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>AI Inventory Assistant</h2>
+
+        <div class="ai-box">
+
+            <input
+                type="text"
+                id="aiInput"
+                placeholder="Ask AI about inventory..."
+            >
+
+            <button onclick="askAI()">
+                Ask AI
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+<div id="toast"></div>
+
+<script src="inventory-management.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+body{
+
+    background:#f5f7fb;
+
+}
+
+.profile-card{
+
+    max-width:800px;
+
+    margin:40px auto;
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:30px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.profile-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.item{
+
+    background:#f8fafc;
+
+    padding:15px;
+
+    border-radius:8px;
+
+}
+
+.item strong{
+
+    display:block;
+
+    color:#2563eb;
+
+    margin-bottom:8px;
+
+}
+
+.back-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 20px;
+
+    border-radius:8px;
+
+}

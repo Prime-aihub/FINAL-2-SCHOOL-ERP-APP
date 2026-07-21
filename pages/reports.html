@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Reports | MAIAMMA Teacher Hub</title>
+
+  <link rel="stylesheet" href="reports.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+  <aside class="sidebar">
+    <div class="brand">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <div>
+        <b>MAIAMMA</b>
+        <small>Teacher Hub</small>
+      </div>
+    </div>
+
+    <nav>
+      <a href="../teacher-dashboard.html">
+        <i class="fa-solid fa-house"></i>Dashboard
+      </a>
+
+      <a href="attendance.html">
+        <i class="fa-solid fa-calendar-check"></i>Attendance
+      </a>
+
+      <a href="homework.html">
+        <i class="fa-solid fa-book-open"></i>Homework
+      </a>
+
+      <a href="assignments.html">
+        <i class="fa-solid fa-clipboard-list"></i>Assignments
+      </a>
+
+      <a href="students.html">
+        <i class="fa-solid fa-users"></i>Students
+      </a>
+
+      <a class="active" href="reports.html">
+        <i class="fa-solid fa-chart-line"></i>Reports
+      </a>
+
+      <a href="../teacher-dashboard.html">
+        <i class="fa-solid fa-arrow-left"></i>Back Dashboard
+      </a>
+    </nav>
+  </aside>
+
+  <main>
+    <header>
+      <div>
+        <p class="eyebrow">TEACHER HUB</p>
+        <h1>Class Reports</h1>
+        <p class="muted">View a simple overview of class activity.</p>
+      </div>
+
+      <button id="printReport" class="primary">
+        <i class="fa-solid fa-print"></i> Print Report
+      </button>
+    </header>
+
+    <section class="filters card">
+      <label>
+        Class
+        <select id="classFilter">
+          <option value="8-C">8-C</option>
+          <option value="9-A">9-A</option>
+          <option value="10-B">10-B</option>
+        </select>
+      </label>
+
+      <label>
+        Report month
+        <input id="reportMonth" type="month">
+      </label>
+
+      <button id="generateReport" class="primary">
+        Generate Report
+      </button>
+    </section>
+
+    <section class="summary">
+      <article>
+        <i class="fa-solid fa-users"></i>
+        <b id="studentCount">0</b>
+        <span>Total Students</span>
+      </article>
+
+      <article>
+        <i class="fa-solid fa-calendar-check"></i>
+        <b id="attendanceRate">0%</b>
+        <span>Attendance Rate</span>
+      </article>
+
+      <article>
+        <i class="fa-solid fa-book-open"></i>
+        <b id="homeworkCount">0</b>
+        <span>Homework Given</span>
+      </article>
+
+      <article>
+        <i class="fa-solid fa-clipboard-list"></i>
+        <b id="assignmentCount">0</b>
+        <span>Assignments Given</span>
+      </article>
+    </section>
+
+    <section class="card">
+      <div class="card-title">
+        <h2>Student Performance Overview</h2>
+        <span id="reportInfo">Class 8-C</span>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Student</th>
+              <th>Admission No.</th>
+              <th>Attendance</th>
+              <th>Performance</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody id="reportRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <p id="notice" role="status"></p>
+  </main>
+
+  <script src="reports.js"></script>
+</body>
+</html>

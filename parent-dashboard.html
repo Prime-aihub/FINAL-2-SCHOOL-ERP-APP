@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIAMMA School Hub | Parent Dashboard</title>
+
+    <link rel="stylesheet" href="parent-dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+            <div class="logo-box">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <div>
+                <h2>MAIAMMA</h2>
+                <p>School Hub</p>
+            </div>
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li class="active">
+                <a href="#">
+                    <i class="fas fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Child Profile</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Attendance</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-book-open"></i>
+                    <span>Homework</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Results</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-wallet"></i>
+                    <span>Fees</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-bus"></i>
+                    <span>Transport</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-comments"></i>
+                    <span>Messages</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-store"></i>
+                    <span>School Store</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-robot"></i>
+                    <span>AI Assistant</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+                <h1>Parent Dashboard</h1>
+                <p>Welcome Back, Parent</p>
+            </div>
+
+            <div class="topbar-right">
+
+                <button id="themeToggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <div class="parent-profile">
+                    <img src="https://i.pravatar.cc/100" alt="">
+                    <div>
+                        <h4>Priya Sharma</h4>
+                        <span>Parent Account</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- CHILD PROFILE -->
+
+        <section class="child-profile-card">
+
+            <div class="student-image">
+                <img src="https://i.pravatar.cc/200?img=12" alt="">
+            </div>
+
+            <div class="student-details">
+
+                <h2>Aarav Sharma</h2>
+
+                <div class="student-grid">
+
+                    <div>
+                        <span>Class</span>
+                        <h4>7th Standard</h4>
+                    </div>
+
+                    <div>
+                        <span>Section</span>
+                        <h4>A</h4>
+                    </div>
+
+                    <div>
+                        <span>Roll Number</span>
+                        <h4>21</h4>
+                    </div>
+
+                    <div>
+                        <span>Academic Year</span>
+                        <h4>2026-27</h4>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- QUICK STATS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card attendance">
+                <i class="fas fa-calendar-check"></i>
+                <h2>96%</h2>
+                <p>Attendance</p>
+            </div>
+
+            <div class="stat-card homework">
+                <i class="fas fa-book-open"></i>
+                <h2>05</h2>
+                <p>Pending Homework</p>
+            </div>
+
+            <div class="stat-card result">
+                <i class="fas fa-chart-line"></i>
+                <h2>89%</h2>
+                <p>Academic Score</p>
+            </div>
+
+            <div class="stat-card fee">
+                <i class="fas fa-wallet"></i>
+                <h2>₹5,000</h2>
+                <p>Pending Fees</p>
+            </div>
+
+        </section>
+
+        <!-- DASHBOARD GRID -->
+
+        <section class="dashboard-grid">
+
+            <!-- ATTENDANCE -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Attendance Overview</h3>
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+
+                <div class="attendance-progress">
+
+                    <div class="progress-circle">
+                        <span>96%</span>
+                    </div>
+
+                    <div>
+
+                        <p>Present Days : 172</p>
+                        <p>Absent Days : 08</p>
+                        <p>Total Working Days : 180</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- HOMEWORK -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Homework Status</h3>
+                    <i class="fas fa-book-open"></i>
+                </div>
+
+                <ul class="homework-list">
+                    <li>Mathematics Assignment - Pending</li>
+                    <li>Science Project - Pending</li>
+                    <li>English Essay - Completed</li>
+                    <li>History Worksheet - Completed</li>
+                </ul>
+
+            </div>
+
+            <!-- RESULTS -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Subject Performance</h3>
+                    <i class="fas fa-chart-line"></i>
+                </div>
+
+                <div class="subject-score">
+                    <span>Mathematics</span>
+                    <strong>95%</strong>
+                </div>
+
+                <div class="subject-score">
+                    <span>Science</span>
+                    <strong>92%</strong>
+                </div>
+
+                <div class="subject-score">
+                    <span>English</span>
+                    <strong>87%</strong>
+                </div>
+
+                <div class="subject-score">
+                    <span>Social Studies</span>
+                    <strong>84%</strong>
+                </div>
+
+            </div>
+
+            <!-- FEES -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Fee Summary</h3>
+                    <i class="fas fa-wallet"></i>
+                </div>
+
+                <p>Total Paid : ₹35,000</p>
+                <p>Pending : ₹5,000</p>
+                <p>Next Due Date : 30 June 2026</p>
+
+                <button class="action-btn">
+                    Download Receipt
+                </button>
+
+            </div>
+
+            <!-- TRANSPORT -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Transport Tracking</h3>
+                    <i class="fas fa-bus"></i>
+                </div>
+
+                <p><strong>Bus No :</strong> MH20-1024</p>
+                <p><strong>Driver :</strong> Rajesh Patil</p>
+                <p><strong>ETA :</strong> 8 Minutes</p>
+
+                <button class="action-btn">
+                    Live Tracking
+                </button>
+
+            </div>
+
+            <!-- MESSAGES -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Teacher Messages</h3>
+                    <i class="fas fa-comments"></i>
+                </div>
+
+                <div class="message-box">
+                    Parent Meeting scheduled this Friday at 11:00 AM.
+                </div>
+
+                <div class="message-box">
+                    Science project submission due next week.
+                </div>
+
+            </div>
+
+            <!-- SCHOOL STORE -->
+
+            <div class="dashboard-card wide-card">
+
+                <div class="card-header">
+                    <h3>School Store</h3>
+                    <i class="fas fa-store"></i>
+                </div>
+
+                <div class="store-grid">
+
+                    <div class="store-item">
+                        <i class="fas fa-shirt"></i>
+                        <p>Uniforms</p>
+                    </div>
+
+                    <div class="store-item">
+                        <i class="fas fa-briefcase"></i>
+                        <p>School Bags</p>
+                    </div>
+
+                    <div class="store-item">
+                        <i class="fas fa-book"></i>
+                        <p>Books</p>
+                    </div>
+
+                    <div class="store-item">
+                        <i class="fas fa-pencil"></i>
+                        <p>Stationery</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- AI ASSISTANT -->
+
+            <div class="dashboard-card wide-card">
+
+                <div class="card-header">
+                    <h3>AI Parent Assistant</h3>
+                    <i class="fas fa-robot"></i>
+                </div>
+
+                <div class="ai-chat">
+
+                    <div class="ai-message">
+                        Hello Parent 👋 How can I help you today?
+                    </div>
+
+                    <input
+                        type="text"
+                        placeholder="Ask about attendance, fees, homework or results..."
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+<script src="parent-dashboard.js"></script>
+
+</body>
+</html>

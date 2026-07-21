@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIAMMA School Hub | Teacher Dashboard</title>
+
+    <link rel="stylesheet" href="teacher-dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+
+            <div class="logo-box">
+                <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+
+            <div>
+                <h2>MAIAMMA</h2>
+                <p>Teacher Hub</p>
+            </div>
+
+        </div>
+
+      <ul class="sidebar-menu">
+
+    <li class="active">
+        <a href="teacher-dashboard.html">
+            <i class="fas fa-home"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+
+    <li>
+    <span>
+        <i class="fas fa-comments"></i>
+        <span>Profile</span>
+    </span>
+</li>
+
+    <li>
+        <a href="pages/attendance.html">
+            <i class="fas fa-calendar-check"></i>
+            <span>Attendance</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="pages/homework.html">
+            <i class="fas fa-book-open"></i>
+            <span>Homework</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="pages/assignments.html">
+            <i class="fas fa-file-signature"></i>
+            <span>Assignments</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="pages/exams.html">
+            <i class="fas fa-file-alt"></i>
+            <span>Exams</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="pages/students.html">
+            <i class="fas fa-users"></i>
+            <span>Students</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="pages/parent-chat.html">
+            <i class="fas fa-comments"></i>
+            <span>Parent Chat</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="pages/reports.html">
+            <i class="fas fa-chart-line"></i>
+            <span>Reports</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="pages/ai-assistant.html">
+            <i class="fas fa-robot"></i>
+            <span>AI Assistant</span>
+        </a>
+    </li>
+
+</ul>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+                <h1>Teacher Dashboard</h1>
+                <p id="welcomeTeacher">
+    Welcome Back...
+</p>
+            </div>
+
+            <div class="topbar-right">
+
+                <button id="themeToggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <div class="teacher-profile">
+
+                    <img
+    id="topTeacherPhoto"
+    src="images/default-teacher.jpg"
+>
+
+                    <div>
+                        <h4 id="topTeacherName">
+    Loading...
+</h4>
+                        <span id="topTeacherClass">
+    Loading...
+</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- PROFILE CARD -->
+
+        <section class="teacher-profile-card">
+
+            <div class="teacher-image">
+                <img
+    id="teacherPhoto"
+    src="images/default-teacher.jpg"
+>
+            </div>
+
+            <div class="teacher-details">
+
+                <h2 id="teacherName">Loading...</h2>
+
+                <div class="teacher-info-grid">
+
+                    <div>
+                        <span>Department</span>
+                        <h4 id="teacherDepartment">Loading...</h4>
+                    </div>
+
+                    <div>
+                        <span>Class Teacher</span>
+                        <h4 id="teacherClass">Loading...</h4>
+                    </div>
+
+                    <div>
+                        <span>Students</span>
+                        <h4 id="teacherStudents">0</h4>
+                    </div>
+
+                    <div>
+                        <span>Experience</span>
+                        <h4 id="teacherExperience">0 Years</h4>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- QUICK STATS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <h2>42</h2>
+                <p>Total Students</p>
+            </div>
+
+            <div class="stat-card">
+                <i class="fas fa-calendar-check"></i>
+                <h2>96%</h2>
+                <p>Attendance Rate</p>
+            </div>
+
+            <div class="stat-card">
+                <i class="fas fa-book-open"></i>
+                <h2>12</h2>
+                <p>Homework Assigned</p>
+            </div>
+
+            <div class="stat-card">
+                <i class="fas fa-file-alt"></i>
+                <h2>4</h2>
+                <p>Upcoming Exams</p>
+            </div>
+
+        </section>
+
+        <!-- DASHBOARD GRID -->
+
+        <section class="dashboard-grid">
+
+            <!-- ATTENDANCE -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Today's Attendance</h3>
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+
+                <p>Present Students: 40</p>
+                <p>Absent Students: 2</p>
+
+                <button
+    class="action-btn"
+    onclick="window.location.href='pages/attendance.html'">
+    Mark Attendance
+</button>
+
+            </div>
+
+            <!-- HOMEWORK -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Homework Management</h3>
+                    <i class="fas fa-book-open"></i>
+                </div>
+
+                <ul class="list-box">
+                    <li>Science Assignment</li>
+                    <li>Math Worksheet</li>
+                    <li>English Essay</li>
+                </ul>
+
+                <button
+    class="action-btn"
+    onclick="window.location.href='pages/homework.html'">
+    Assign Homework
+</button>
+
+
+            </div>
+
+            <!-- EXAMS -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Upcoming Exams</h3>
+                    <i class="fas fa-file-alt"></i>
+                </div>
+
+                <ul class="list-box">
+                    <li>Science - 15 July</li>
+                    <li>Maths - 18 July</li>
+                    <li>English - 20 July</li>
+                </ul>
+
+            </div>
+
+            <!-- LESSON PLAN -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Lesson Plan</h3>
+                    <i class="fas fa-chalkboard"></i>
+                </div>
+
+                <ul class="list-box">
+                    <li>Chapter 8 - Human Body</li>
+                    <li>Lab Activity Planning</li>
+                    <li>Revision Session</li>
+                </ul>
+
+            </div>
+
+            <!-- STUDENT PERFORMANCE -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Class Performance</h3>
+                    <i class="fas fa-chart-line"></i>
+                </div>
+
+                <div class="subject-score">
+                    <span>Science</span>
+                    <strong>92%</strong>
+                </div>
+
+                <div class="subject-score">
+                    <span>Maths</span>
+                    <strong>88%</strong>
+                </div>
+
+                <div class="subject-score">
+                    <span>English</span>
+                    <strong>85%</strong>
+                </div>
+
+            </div>
+
+            <!-- PARENT CHAT -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Parent Communication</h3>
+                    <i class="fas fa-comments"></i>
+                </div>
+
+                <div class="message-box">
+                    Parent Meeting Scheduled Friday.
+                </div>
+
+                <div class="message-box">
+                    Science Project Reminder Sent.
+                </div>
+
+            </div>
+
+            <!-- STUDENT REPORTS -->
+
+            <div class="dashboard-card wide-card">
+
+                <div class="card-header">
+                    <h3>Student Reports</h3>
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+
+                <table class="report-table">
+
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Attendance</th>
+                            <th>Score</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Aarav Sharma</td>
+                            <td>96%</td>
+                            <td>89%</td>
+                            <td>Excellent</td>
+                        </tr>
+
+                        <tr>
+                            <td>Ananya Patel</td>
+                            <td>98%</td>
+                            <td>94%</td>
+                            <td>Excellent</td>
+                        </tr>
+
+                        <tr>
+                            <td>Rahul Verma</td>
+                            <td>91%</td>
+                            <td>82%</td>
+                            <td>Good</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- AI TEACHER ASSISTANT -->
+
+            <div class="dashboard-card wide-card">
+
+                <div class="card-header">
+                    <h3>AI Teacher Assistant</h3>
+                    <i class="fas fa-robot"></i>
+                </div>
+
+                <div class="ai-chat">
+
+                    <div class="ai-message">
+                        Hello Teacher 👋 How can I assist you today?
+                    </div>
+
+                    <input
+                        type="text"
+                        placeholder="Ask AI about lesson plans, reports, attendance..."
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="teacher-dashboard.js"></script>
+
+</body>
+</html>

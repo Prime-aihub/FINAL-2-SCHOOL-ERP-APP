@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIAMMA School Hub | Student Dashboard</title>
+
+    <link rel="stylesheet" href="student-dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+
+            <div class="logo-box">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+
+            <div>
+                <h2>MAIAMMA</h2>
+                <p>Student Hub</p>
+            </div>
+
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li class="active">
+                <a href="#">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Timetable</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-book"></i>
+                    <span>Homework</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-tasks"></i>
+                    <span>Assignments</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Exams</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Results</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-award"></i>
+                    <span>Rewards</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-brain"></i>
+                    <span>AI Tutor</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-cube"></i>
+                    <span>3D Learning</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+                <h1>Student Dashboard</h1>
+                <p id="welcomeStudent">Welcome Back...</p>
+            </div>
+
+            <div class="topbar-right">
+
+                <button id="themeToggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <div class="student-profile-mini">
+
+   <div class="student-profile-mini">
+
+    <img
+        id="topStudentPhoto"
+        src="https://ui-avatars.com/api/?name=Student"
+    >
+
+    <div>
+        <h4 id="topStudentName">Loading...</h4>
+        <span id="topStudentClass">Loading...</span>
+    </div>
+
+</div>
+
+            </div>
+
+        </header>
+
+        <!-- STUDENT PROFILE -->
+
+        <section class="student-profile-card">
+
+            <div class="student-image">
+
+                <img
+    id="studentPhoto"
+    src="https://ui-avatars.com/api/?name=Student"
+>
+
+            </div>
+
+            <div class="student-details">
+
+                <h2 id="studentName">Loading...</h2>
+
+                <div class="student-info-grid">
+
+    <div>
+        <span>Class</span>
+        <h4 id="studentClass">Loading...</h4>
+    </div>
+
+    <div>
+        <span>Section</span>
+        <h4 id="studentSection">Loading...</h4>
+    </div>
+
+    <div>
+        <span>Admission No.</span>
+        <h4 id="studentAdmissionNo">Loading...</h4>
+    </div>
+
+    <div>
+        <span>Attendance</span>
+    <h4 id="studentAttendance">Loading...</h4>
+</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- QUICK STATS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <i class="fas fa-book"></i>
+                <h2 id="pendingHomeworkCount">0</h2>
+                <p>Pending Homework</p>
+            </div>
+
+            <div class="stat-card">
+                <i class="fas fa-chart-line"></i>
+                <h2>89%</h2>
+                <p>Academic Score</p>
+            </div>
+
+            <div class="stat-card">
+                <i class="fas fa-award"></i>
+                <h2>12</h2>
+                <p>Badges Earned</p>
+            </div>
+
+            <div class="stat-card">
+                <i class="fas fa-star"></i>
+                <h2>850</h2>
+                <p>Reward Points</p>
+            </div>
+
+        </section>
+
+        <!-- DASHBOARD GRID -->
+
+        <section class="dashboard-grid">
+
+            <!-- TIMETABLE -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Today's Timetable</h3>
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+
+                <ul class="list-box">
+    <li>Maths - 09:00 AM</li>
+    <li>Science - 10:00 AM</li>
+    <li>English - 11:00 AM</li>
+    <li>Computer - 12:00 PM</li>
+</ul>
+
+            </div>
+            
+            <!-- LIVE ATTENDANCE -->
+
+<div class="dashboard-card">
+
+    <div class="card-header">
+        <h3>Today's Attendance</h3>
+        <i class="fas fa-calendar-check"></i>
+    </div>
+
+    <div id="attendanceAlert" class="attendance-alert">
+        Loading attendance...
+    </div>
+
+    <p>Present Days: <strong id="presentDays">0</strong></p>
+    <p>Absent Days: <strong id="absentDays">0</strong></p>
+
+</div>     
+
+            <!-- HOMEWORK -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Homework</h3>
+                    <i class="fas fa-book"></i>
+                </div>
+
+                <ul id="studentHomeworkList" class="list-box">
+    <li>Loading homework...</li>
+</ul>
+            </div>
+
+            <!-- ASSIGNMENTS -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Assignments</h3>
+                    <i class="fas fa-tasks"></i>
+                </div>
+
+                <ul class="list-box">
+                    <li>Physics Worksheet</li>
+                    <li>History Presentation</li>
+                    <li>Computer Coding Task</li>
+                </ul>
+
+            </div>
+
+            <!-- EXAMS -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Upcoming Exams</h3>
+                    <i class="fas fa-file-alt"></i>
+                </div>
+
+                <ul class="list-box">
+                    <li>Maths - 15 July</li>
+                    <li>Science - 18 July</li>
+                    <li>English - 20 July</li>
+                </ul>
+
+            </div>
+
+            <!-- RESULTS -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Subject Performance</h3>
+                    <i class="fas fa-chart-line"></i>
+                </div>
+
+                <div class="subject-score">
+                    <span>Maths</span>
+                    <strong>95%</strong>
+                </div>
+
+                <div class="subject-score">
+                    <span>Science</span>
+                    <strong>92%</strong>
+                </div>
+
+                <div class="subject-score">
+                    <span>English</span>
+                    <strong>88%</strong>
+                </div>
+
+            </div>
+
+            <!-- LEARNING PROGRESS -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Learning Progress</h3>
+                    <i class="fas fa-chart-pie"></i>
+                </div>
+
+                <div class="progress-box">
+
+                    <div class="progress-item">
+                        <span>Maths</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width:95%"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <span>Science</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width:90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <span>English</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width:85%"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- REWARDS -->
+
+            <div class="dashboard-card wide-card">
+
+                <div class="card-header">
+                    <h3>Badges & Achievements</h3>
+                    <i class="fas fa-award"></i>
+                </div>
+
+                <div class="badge-grid">
+
+                    <div class="badge-card">
+                        🏆 Top Performer
+                    </div>
+
+                    <div class="badge-card">
+                        ⭐ Attendance Star
+                    </div>
+
+                    <div class="badge-card">
+                        📚 Reading Champion
+                    </div>
+
+                    <div class="badge-card">
+                        💡 Science Genius
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- STEM ECOSYSTEM -->
+
+<div class="dashboard-card wide-card">
+
+    <div class="card-header">
+        <h3>🚀 STEM Ecosystem</h3>
+        <i class="fas fa-rocket"></i>
+    </div>
+
+    <p>
+        Explore AI, Space Science, Robotics,
+        Drone Technology, Coding and STEM Labs.
+    </p>
+
+    <a href="stem-ecosystem.html" class="action-btn">
+        Explore STEM Programs
+    </a>
+
+</div>
+
+            <!-- AI TUTOR -->
+
+            <div class="dashboard-card wide-card">
+
+                <div class="card-header">
+                    <h3>AI Tutor</h3>
+                    <i class="fas fa-brain"></i>
+                </div>
+
+                <div class="ai-chat">
+
+                    <div id="aiGreeting" class="ai-message">
+    Hello Student 👋 Ask me anything about your studies.
+</div>
+
+                    <input
+                        type="text"
+                        placeholder="Ask your AI Tutor..."
+                    >
+
+                </div>
+
+            </div>
+
+            <!-- SMART QUIZ IQ -->
+
+<div class="dashboard-card wide-card">
+
+    <div class="card-header">
+        <h3>Smart Quiz IQ</h3>
+        <i class="fas fa-lightbulb"></i>
+    </div>
+
+    <p>
+        Daily IQ Challenges, Logical Reasoning,
+        Aptitude Tests and Skill Assessments.
+    </p>
+
+    <a href="smart-quiz-iq.html" class="action-btn">
+        Start Quiz
+    </a>
+
+</div>
+
+            <!-- FUTURE 3D LEARNING -->
+
+            <div class="dashboard-card wide-card">
+
+                <div class="card-header">
+                    <h3>Future 3D Learning Lab</h3>
+                    <i class="fas fa-cube"></i>
+                </div>
+
+                <div class="future-grid">
+
+                    <div class="future-card">Human Body</div>
+                    <div class="future-card">Solar System</div>
+                    <div class="future-card">Volcano</div>
+                    <div class="future-card">Brain</div>
+                    <div class="future-card">Plant Cell</div>
+                    <div class="future-card">Virtual Labs</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="student-dashboard.js"></script>
+    <script type="module" src="learner-attendance.js"></script>
+</body>
+</html>

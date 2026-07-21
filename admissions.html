@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MAIAMMA School Hub | Admissions Management</title>
+
+<link rel="stylesheet" href="admissions.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="page-container">
+
+    <!-- PAGE HEADER -->
+
+    <div class="page-header">
+
+    <div>
+        <h1>Admissions Management</h1>
+        <p>Manage applications, approvals and enrollment process</p>
+    </div>
+
+    <div class="header-actions">
+
+        <button id="themeToggle" class="theme-btn">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <button class="add-btn">
+            <i class="fas fa-plus"></i>
+            New Admission
+        </button>
+
+    </div>
+
+</div>
+
+    <!-- KPI CARDS -->
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+            <i class="fas fa-user-plus"></i>
+            <h2>245</h2>
+            <p>Total Applications</p>
+        </div>
+
+        <div class="stat-card">
+            <i class="fas fa-clock"></i>
+            <h2>38</h2>
+            <p>Pending Review</p>
+        </div>
+
+        <div class="stat-card">
+            <i class="fas fa-check-circle"></i>
+            <h2>172</h2>
+            <p>Approved</p>
+        </div>
+
+        <div class="stat-card">
+            <i class="fas fa-times-circle"></i>
+            <h2>35</h2>
+            <p>Rejected</p>
+        </div>
+
+    </section>
+
+    <!-- FILTERS -->
+
+    <section class="filter-card">
+
+        <input
+            type="text"
+            placeholder="Search Student..."
+        >
+
+        <select>
+
+            <option>
+                All Classes
+            </option>
+
+            <option>
+                Nursery
+            </option>
+
+            <option>
+                Grade 1
+            </option>
+
+            <option>
+                Grade 2
+            </option>
+
+            <option>
+                Grade 3
+            </option>
+
+        </select>
+
+        <select>
+
+            <option>
+                All Status
+            </option>
+
+            <option>
+                Pending
+            </option>
+
+            <option>
+                Approved
+            </option>
+
+            <option>
+                Rejected
+            </option>
+
+        </select>
+
+    </section>
+
+    <!-- APPLICATION TABLE -->
+
+    <section class="table-card">
+
+        <div class="table-header">
+
+            <h3>Admission Applications</h3>
+
+        </div>
+
+        <table class="admission-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Application ID</th>
+                    <th>Student Name</th>
+                    <th>Class</th>
+                    <th>Parent</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>ADM001</td>
+                    <td>Aarav Sharma</td>
+                    <td>Grade 7</td>
+                    <td>Rajesh Sharma</td>
+                    <td>
+                        <span class="status pending">
+                            Pending
+                        </span>
+                    </td>
+
+                    <td>
+
+                        <button class="approve-btn">
+                            Approve
+                        </button>
+
+                        <button class="reject-btn">
+                            Reject
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>ADM002</td>
+                    <td>Ananya Patel</td>
+                    <td>Grade 5</td>
+                    <td>Rakesh Patel</td>
+                    <td>
+                        <span class="status approved">
+                            Approved
+                        </span>
+                    </td>
+
+                    <td>
+
+                        <button class="view-btn">
+                            View
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>ADM003</td>
+                    <td>Rahul Verma</td>
+                    <td>Grade 8</td>
+                    <td>Amit Verma</td>
+                    <td>
+                        <span class="status rejected">
+                            Rejected
+                        </span>
+                    </td>
+
+                    <td>
+
+                        <button class="view-btn">
+                            View
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- ADMISSION PIPELINE -->
+
+    <section class="pipeline-grid">
+
+        <div class="pipeline-card">
+
+            <h3>Application Received</h3>
+            <strong>245</strong>
+
+        </div>
+
+        <div class="pipeline-card">
+
+            <h3>Document Verification</h3>
+            <strong>98</strong>
+
+        </div>
+
+        <div class="pipeline-card">
+
+            <h3>Interview Stage</h3>
+            <strong>42</strong>
+
+        </div>
+
+        <div class="pipeline-card">
+
+            <h3>Final Enrollment</h3>
+            <strong>172</strong>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="admissions.js"></script>
+
+</body>
+</html>

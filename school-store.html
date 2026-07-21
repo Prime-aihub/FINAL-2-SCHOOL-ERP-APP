@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIAMMA School Store</title>
+    <link rel="stylesheet" href="school-store.css">
+</head>
+<body>
+
+<header class="topbar">
+    <h1>🛒 School Store</h1>
+
+    <button id="themeToggle" class="theme-btn">
+        🌙 Theme
+    </button>
+</header>
+
+<div class="dashboard-container">
+
+    <!-- Statistics -->
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+            <h3>Total Orders</h3>
+            <h2>1,248</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>Revenue</h3>
+            <h2>₹4,25,000</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>Products</h3>
+            <h2>315</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>Pending Orders</h3>
+            <h2>28</h2>
+        </div>
+
+    </section>
+
+    <!-- Categories -->
+
+    <section class="card">
+        <h2>Store Categories</h2>
+
+        <div class="category-grid">
+
+            <div class="category-card">👔 Uniform Store</div>
+            <div class="category-card">🎒 School Bags</div>
+            <div class="category-card">📚 Books</div>
+            <div class="category-card">✏️ Stationery</div>
+            <div class="category-card">🪪 ID Cards</div>
+            <div class="category-card">🎁 Merchandise</div>
+            <div class="category-card">🤖 STEM Kits</div>
+            <div class="category-card">🧠 AI Learning Kits</div>
+
+        </div>
+    </section>
+
+    <!-- Orders -->
+
+    <section class="card">
+
+        <h2>Recent Orders</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Student</th>
+                    <th>Product</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>#1023</td>
+                    <td>Rahul Sharma</td>
+                    <td>School Bag</td>
+                    <td><span class="success">Delivered</span></td>
+                </tr>
+
+                <tr>
+                    <td>#1024</td>
+                    <td>Priya Patil</td>
+                    <td>Uniform</td>
+                    <td><span class="pending">Pending</span></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- Revenue Analytics -->
+
+    <section class="card">
+
+        <h2>Revenue Analytics</h2>
+
+        <div class="analytics-grid">
+
+            <div class="analytics-card">
+                Uniform Sales ₹1.8L
+            </div>
+
+            <div class="analytics-card">
+                Books ₹95K
+            </div>
+
+            <div class="analytics-card">
+                STEM Kits ₹60K
+            </div>
+
+            <div class="analytics-card">
+                Bags ₹40K
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- AI Assistant -->
+
+    <section class="card">
+
+        <h2>AI Store Assistant</h2>
+
+        <div class="ai-chat">
+
+            <p>How can I help manage your school store today?</p>
+
+            <input
+                type="text"
+                id="aiInput"
+                placeholder="Ask AI Assistant..."
+            >
+
+            <button onclick="askAI()">
+                Ask AI
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
+
+<div id="toast"></div>
+
+<script src="school-store.js"></script>
+
+</body>
+</html>

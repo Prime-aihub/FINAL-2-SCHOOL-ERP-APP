@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Smart Quiz & IQ Arena</title>
+
+<link rel="stylesheet" href="smart-quiz-iq.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="hero">
+
+    <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="hero-video">
+
+        <source
+            src="media/quiz-hero.mp4"
+            type="video/mp4">
+
+    </video>
+
+
+<div class="hero-overlay">
+
+    <h1>🧠 SMART QUIZ & IQ ARENA</h1>
+
+    <p>
+        Challenge Your Mind • Earn XP • Unlock Levels • Compete Globally
+    </p>
+
+    <button class="hero-btn" id="startChallengeBtn">
+        ⚡ Start Challenge
+    </button>
+
+</div>
+
+
+</header>
+
+<nav class="topbar">
+
+
+<h2>⚡ Intelligence Dashboard</h2>
+
+<button id="themeToggle">
+    🌙 Theme
+</button>
+
+
+</nav>
+
+<main class="container">
+
+
+<!-- STATS -->
+
+<section class="stats-grid">
+
+    <div class="neon-card">
+        <h3>Total Participants</h3>
+        <h2>12,480</h2>
+    </div>
+
+    <div class="neon-card">
+        <h3>Challenges Completed</h3>
+        <h2>52,311</h2>
+    </div>
+
+    <div class="neon-card">
+        <h3>Certificates Issued</h3>
+        <h2>8,725</h2>
+    </div>
+
+    <div class="neon-card">
+        <h3>Current Rank</h3>
+        <h2>#17</h2>
+    </div>
+
+</section>
+
+<!-- QUIZ CATEGORIES -->
+
+<section class="glass-card">
+
+    <h2>🎯 Challenge Categories</h2>
+
+    <div class="challenge-grid">
+
+        <div class="challenge-card" data-category="iq">
+            🧠 IQ Test
+        </div>
+
+        <div class="challenge-card" data-category="logical">
+            🔍 Logical Reasoning
+        </div>
+
+        <div class="challenge-card" data-category="aptitude">
+            ➕ Aptitude Test
+        </div>
+
+        <div class="challenge-card" data-category="puzzle">
+            🧩 Puzzle Arena
+        </div>
+
+        <div class="challenge-card" data-category="brain">
+            ⚡ Brain Challenges
+        </div>
+
+        <div class="challenge-card" data-category="stem">
+            🚀 STEM Quiz
+        </div>
+
+        <div class="challenge-card" data-category="ai">
+            🤖 AI Quiz
+        </div>
+
+        <div class="challenge-card" data-category="space">
+            🌌 Space Quiz
+        </div>
+
+    </div>
+
+</section>
+
+<!-- LIVE QUIZ AREA -->
+
+<section class="glass-card quiz-section" id="quizSection">
+
+    <div class="quiz-header">
+
+        <h2 id="quizTitle">
+            Select a Category
+        </h2>
+
+        <div class="quiz-info">
+
+            <span>
+                ⏱ Timer:
+                <strong id="timer">30</strong>s
+            </span>
+
+            <span>
+                ⭐ Score:
+                <strong id="score">0</strong>
+            </span>
+
+            <span>
+                🏅 Level:
+                <strong id="level">1</strong>
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="progress-wrap">
+
+        <div class="progress-bar">
+            <div id="progressFill"></div>
+        </div>
+
+    </div>
+
+    <div class="question-box">
+
+        <h3 id="questionText">
+            Choose a quiz category to begin.
+        </h3>
+
+        <div id="answersContainer"
+             class="answers-container">
+
+        </div>
+
+    </div>
+
+    <!-- CONSOLE -->
+
+    <div class="quiz-console">
+
+        <div class="console-header">
+
+            <span>QUIZ CONSOLE</span>
+
+        </div>
+
+        <div id="consoleOutput">
+
+            System Ready...
+
+        </div>
+
+    </div>
+
+    <div class="quiz-actions">
+
+        <button id="nextBtn">
+            Next Question →
+        </button>
+
+    </div>
+
+</section>
+
+<!-- RESULT SCREEN -->
+
+<section class="glass-card result-section"
+         id="resultSection">
+
+    <h2>🏆 Quiz Completed</h2>
+
+    <h1 id="finalScore">
+        0 / 50
+    </h1>
+
+    <p id="resultMessage">
+
+    </p>
+
+    <button id="restartBtn">
+        Play Again
+    </button>
+
+</section>
+
+<!-- LEADERBOARD -->
+
+<section class="glass-card">
+
+    <h2>🏆 Global Leaderboard</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Points</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>🥇 1</td>
+                <td>Arjun</td>
+                <td>9850</td>
+            </tr>
+
+            <tr>
+                <td>🥈 2</td>
+                <td>Sneha</td>
+                <td>9420</td>
+            </tr>
+
+            <tr>
+                <td>🥉 3</td>
+                <td>Rohan</td>
+                <td>9180</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+<!-- BADGES -->
+
+<section class="glass-card">
+
+    <h2>🎖 Achievement Badges</h2>
+
+    <div class="badge-grid">
+
+        <div class="badge">🏆 Genius</div>
+        <div class="badge">🧠 IQ Master</div>
+        <div class="badge">⚡ Speed Thinker</div>
+        <div class="badge">🚀 STEM Champion</div>
+
+    </div>
+
+</section>
+
+<!-- ANALYTICS -->
+
+<section class="glass-card">
+
+    <h2>📈 Performance Analytics</h2>
+
+    <div class="analytics-grid">
+
+        <div class="analytics-card">
+            IQ Score : 132
+        </div>
+
+        <div class="analytics-card">
+            Accuracy : 91%
+        </div>
+
+        <div class="analytics-card">
+            Speed : 88%
+        </div>
+
+        <div class="analytics-card">
+            Global Rank : #17
+        </div>
+
+    </div>
+
+</section>
+
+<!-- AI ASSISTANT -->
+
+<section class="glass-card">
+
+    <h2>🤖 AI Quiz Assistant</h2>
+
+    <input
+        id="aiInput"
+        placeholder="Ask AI..."
+    >
+
+    <button onclick="askAI()">
+        Ask AI
+    </button>
+
+</section>
+
+
+</main>
+
+<div id="toast"></div>
+
+<script src="smart-quiz-iq.js"></script>
+
+</body>
+</html>

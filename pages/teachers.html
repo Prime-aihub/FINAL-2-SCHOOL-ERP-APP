@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teachers</title>
+
+    <link rel="stylesheet" href="teachers.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="topbar">
+
+        <h1>
+            <i class="fas fa-chalkboard-teacher"></i>
+            Teacher Management
+        </h1>
+
+        <a href="add-teacher.html" class="addBtn">
+
+            <i class="fas fa-plus"></i>
+
+            Add Teacher
+
+        </a>
+
+    </div>
+
+    <div class="searchBox">
+
+        <input
+            type="text"
+            id="searchTeacher"
+            placeholder="Search Teacher...">
+
+    </div>
+
+    <table class="teacherTable">
+
+        <thead>
+
+            <tr>
+
+                <th>Employee ID</th>
+
+                <th>Name</th>
+
+                <th>Department</th>
+
+                <th>Email</th>
+
+                <th>Mobile</th>
+
+                <th>Actions</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="teacherTableBody">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script type="module" src="teachers.js"></script>
+
+</body>
+
+</html>

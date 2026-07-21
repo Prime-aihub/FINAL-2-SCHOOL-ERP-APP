@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAIAMMA Learning Hub</title>
+<link rel="stylesheet" href="learning-hub.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div>
+        <h1>🎓 Learning Hub</h1>
+        <p>Future Skills Learning Ecosystem</p>
+    </div>
+
+    <button id="themeToggle" class="theme-btn">
+        🌙 Theme
+    </button>
+
+</header>
+
+<main class="container">
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+            <h3>Total Courses</h3>
+            <h2>124</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>Students Enrolled</h3>
+            <h2>8,420</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>Certificates Issued</h3>
+            <h2>3,248</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>Completion Rate</h3>
+            <h2>92%</h2>
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Learning Categories</h2>
+
+        <div class="course-grid">
+
+            <div class="course-card">🤖 Artificial Intelligence</div>
+            <div class="course-card">🚀 Space Education</div>
+            <div class="course-card">🚁 Drone Technology</div>
+            <div class="course-card">💻 Coding & Programming</div>
+            <div class="course-card">🧠 STEM Learning</div>
+            <div class="course-card">🔬 Robotics</div>
+            <div class="course-card">📐 Mathematics Lab</div>
+            <div class="course-card">🌍 Future Skills</div>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Featured Courses</h2>
+
+        <div class="featured-grid">
+
+            <div class="featured-card">
+                <h3>AI Foundations</h3>
+                <p>Introduction to Artificial Intelligence</p>
+                <span>75% Completed</span>
+            </div>
+
+            <div class="featured-card">
+                <h3>Space Explorer Program</h3>
+                <p>Learn Astronomy & Space Science</p>
+                <span>60% Completed</span>
+            </div>
+
+            <div class="featured-card">
+                <h3>Drone Pilot Basics</h3>
+                <p>Drone Operations & Safety</p>
+                <span>45% Completed</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Student Progress Tracking</h2>
+
+        <div class="progress-grid">
+
+            <div class="progress-card">
+                <h3>AI Learning Path</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill ai"></div>
+                </div>
+                <p>78%</p>
+            </div>
+
+            <div class="progress-card">
+                <h3>STEM Learning Path</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill stem"></div>
+                </div>
+                <p>65%</p>
+            </div>
+
+            <div class="progress-card">
+                <h3>Space Learning Path</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill space"></div>
+                </div>
+                <p>82%</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Certificates</h2>
+
+        <div class="certificate-grid">
+
+            <div class="certificate-card">
+                🏆 AI Beginner Certificate
+            </div>
+
+            <div class="certificate-card">
+                🚀 Space Explorer Certificate
+            </div>
+
+            <div class="certificate-card">
+                🤖 STEM Innovator Certificate
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>AI Tutor Assistant</h2>
+
+        <div class="ai-box">
+
+            <input
+                type="text"
+                id="aiInput"
+                placeholder="Ask AI Tutor..."
+            >
+
+            <button onclick="askAI()">
+                Ask AI
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+<div id="toast"></div>
+
+<script src="learning-hub.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Homework | MAIAMMA Teacher Hub</title>
+  <link rel="stylesheet" href="homework.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><i class="fa-solid fa-graduation-cap"></i><div><b>MAIAMMA</b><small>Teacher Hub</small></div></div>
+    <nav>
+      <a href="../teacher-dashboard.html"><i class="fa-solid fa-house"></i>Dashboard</a>
+      <a href="attendance.html"><i class="fa-solid fa-calendar-check"></i>Attendance</a>
+      <a class="active" href="homework.html"><i class="fa-solid fa-book-open"></i>Homework</a>
+      <a href="assignments.html"><i class="fa-solid fa-clipboard-list"></i>Assignments</a>
+      <a href="students.html"><i class="fa-solid fa-users"></i>Students</a>
+      <a href="reports.html"><i class="fa-solid fa-chart-line"></i>Reports</a>
+      <a href="../teacher-dashboard.html"><i class="fa-solid fa-arrow-left"></i>Back Dashboard</a>
+    </nav>
+  </aside>
+  <main>
+    <header><div><p class="eyebrow">TEACHER HUB</p><h1>Homework</h1><p class="muted">Create and view homework for your class.</p></div><button id="showForm" class="primary"><i class="fa-solid fa-plus"></i> Add Homework</button></header>
+    <section id="formCard" class="card hidden">
+      <div class="card-title"><h2>New Homework</h2><button id="closeForm" class="icon-btn"><i class="fa-solid fa-xmark"></i></button></div>
+      <form id="homeworkForm" class="form-grid">
+        <label>Subject<input id="subject" placeholder="e.g. Mathematics" required></label>
+       <label>
+  Class
+  <select id="className" required>
+    <option value="">Select class</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </select>
+</label>
+
+<label>
+  Section
+  <select id="section" required>
+    <option value="">Select section</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+  </select>
+</label>
+        <label>Due date<input id="dueDate" type="date" required></label>
+        <label class="full">Homework details<textarea id="details" placeholder="Write the homework instructions..." required></textarea></label>
+        <button class="primary" type="submit">Save Homework</button>
+      </form>
+    </section>
+    <section class="summary"><article><b id="totalCount">0</b><span>Total homework</span></article><article><b id="todayCount">0</b><span>Due today</span></article><article><b id="upcomingCount">0</b><span>Upcoming</span></article></section>
+    <section class="card"><div class="card-title"><h2>Homework List</h2><input id="searchHomework" placeholder="Search subject or class"></div><div id="homeworkList" class="list"></div></section>
+    <p id="notice" role="status"></p>
+  </main>
+  <script type="module" src="homework.js"></script>
+</body>
+</html>

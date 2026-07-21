@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Students</title>
+
+<link rel="stylesheet" href="../admin-dashboard.css">
+<link rel="stylesheet" href="students.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="dashboard-card" style="margin:30px;">
+
+<div class="student-header">
+
+    <h2>
+        <i class="fas fa-user-graduate"></i>
+        Student Management
+    </h2>
+
+    <a href="add-student.html" class="add-btn">
+        <i class="fas fa-plus"></i>
+        Add Student
+    </a>
+
+</div>
+
+<input
+type="text"
+id="searchStudent"
+placeholder="Search Student..."
+style="width:300px;padding:10px;margin-bottom:20px;">
+
+<table class="admin-table">
+
+<thead>
+
+<tr>
+
+<th>Admission No</th>
+<th>Name</th>
+<th>Class</th>
+<th>Section</th>
+<th>Email</th>
+<th style="width:180px;">Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="studentTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script type="module" src="students.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Attendance | MAIAMMA Teacher Hub</title>
+  <link rel="stylesheet" href="attendance.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><i class="fa-solid fa-graduation-cap"></i><div><b>MAIAMMA</b><small>Teacher Hub</small></div></div>
+    <nav>
+      <li>
+  <a href="../teacher-dashboard.html">
+    <i class="fas fa-home"></i>
+    <span>Dashboard</span>
+  </a>
+</li>
+      <a class="active" href="attendance.html"><i class="fa-solid fa-calendar-check"></i>Attendance</a>
+      <a href="homework.html"><i class="fa-solid fa-book-open"></i>Homework</a>
+      <a href="assignments.html"><i class="fa-solid fa-clipboard-list"></i>Assignments</a>
+      <a href="students.html"><i class="fa-solid fa-users"></i>Students</a>
+      <a href="reports.html"><i class="fa-solid fa-chart-line"></i>Reports</a>
+      <li>
+  <a href="../teacher-dashboard.html">
+    <i class="fas fa-arrow-left"></i>
+    <span>Back Dashboard</span>
+  </a>
+</li>
+    </nav>
+  </aside>
+
+  <main>
+    <header><div><p class="eyebrow">ROSHAN COACHING CLASSES STYLE</p><h1>Daily Attendance</h1><p class="muted">Mark attendance quickly, then save the class record.</p></div><input id="attendanceDate" type="date"></header>
+    <section class="toolbar"><input id="searchStudent" placeholder="Search student"><button id="markAll">Mark all present</button><button class="primary" id="saveAttendance">Save attendance</button></section>
+    <section class="summary"><article><b id="total">0</b><span>Total students</span></article><article><b id="present">0</b><span>Present</span></article><article><b id="absent">0</b><span>Absent</span></article></section>
+    <section class="card"><div class="card-title"><h2>Class Attendance</h2><span id="saveStatus">Not saved</span></div><div class="table-wrap"><table><thead><tr><th>#</th><th>Student</th><th>Admission No.</th><th>Present</th><th>Absent</th></tr></thead><tbody id="attendanceRows"></tbody></table></div></section>
+    <p id="notice" role="status"></p>
+  </main>
+  <script type="module" src="attendance.js"></script>
+</body>
+</html>

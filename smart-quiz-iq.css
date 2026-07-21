@@ -1,0 +1,650 @@
+
+/* =====================================
+   MAIAMMA SMART QUIZ & IQ ARENA
+===================================== */
+
+:root{
+
+    --bg:#070b17;
+    --bg-secondary:#0f172a;
+
+    --card:rgba(255,255,255,.06);
+
+    --cyan:#00e5ff;
+    --purple:#9d4edd;
+    --pink:#ff4fd8;
+
+    --text:#ffffff;
+    --text-secondary:#cbd5e1;
+
+    --success:#22c55e;
+    --danger:#ef4444;
+
+    --glass:rgba(255,255,255,.05);
+}
+
+body.light{
+
+    --bg:#f5f7fb;
+    --bg-secondary:#ffffff;
+
+    --card:#ffffff;
+
+    --text:#111827;
+    --text-secondary:#4b5563;
+
+    --glass:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:var(--bg);
+    color:var(--text);
+
+    font-family:
+    'Poppins',
+    sans-serif;
+
+    transition:.4s;
+}
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero{
+
+    height:420px;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.75)
+    ),
+    url("media/quiz-banner.gif");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+}
+
+.hero-overlay{
+
+    max-width:900px;
+    padding:20px;
+}
+
+.hero h1{
+
+    font-size:3.2rem;
+
+    text-shadow:
+    0 0 20px var(--cyan),
+    0 0 40px var(--cyan);
+
+    margin-bottom:20px;
+}
+
+.hero p{
+
+    color:#e2e8f0;
+
+    font-size:1.1rem;
+
+    margin-bottom:25px;
+}
+
+.hero-btn{
+
+    padding:15px 30px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:var(--cyan);
+
+    color:#000;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 0 15px var(--cyan),
+    0 0 35px var(--cyan);
+
+    transition:.3s;
+}
+
+.hero-btn:hover{
+
+    transform:translateY(-4px);
+}
+
+/* =====================================
+   TOPBAR
+===================================== */
+
+.topbar{
+
+    padding:20px 30px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,.08);
+}
+
+#themeToggle{
+
+    background:var(--purple);
+
+    color:white;
+
+    border:none;
+
+    padding:12px 18px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+}
+
+/* =====================================
+   CONTAINER
+===================================== */
+
+.container{
+    padding:30px;
+}
+
+/* =====================================
+   CARDS
+===================================== */
+
+.glass-card{
+
+    margin-top:25px;
+
+    background:var(--glass);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:22px;
+
+    padding:25px;
+}
+
+.neon-card{
+
+    background:var(--card);
+
+    border-radius:20px;
+
+    padding:20px;
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    transition:.3s;
+}
+
+.neon-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 0 15px var(--cyan),
+    0 0 35px var(--purple);
+}
+
+/* =====================================
+   GRIDS
+===================================== */
+
+.stats-grid,
+.challenge-grid,
+.badge-grid,
+.analytics-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+}
+
+.challenge-card,
+.badge,
+.analytics-card{
+
+    background:var(--card);
+
+    padding:20px;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    border:
+    1px solid rgba(255,255,255,.08);
+}
+
+.challenge-card:hover,
+.badge:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 0 15px var(--cyan),
+    0 0 30px var(--purple);
+}
+
+/* =====================================
+   QUIZ SECTION
+===================================== */
+
+.quiz-section{
+
+    display:block;
+}
+
+.quiz-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+}
+
+.quiz-info{
+
+    display:flex;
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.quiz-info span{
+
+    padding:10px 15px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:12px;
+}
+
+/* =====================================
+   PROGRESS
+===================================== */
+
+.progress-wrap{
+
+    margin:20px 0;
+}
+
+.progress-bar{
+
+    width:100%;
+    height:14px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    border-radius:30px;
+
+    overflow:hidden;
+}
+
+#progressFill{
+
+    width:0%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+    90deg,
+    var(--cyan),
+    var(--purple)
+    );
+
+    transition:.4s;
+}
+
+/* =====================================
+   QUESTION
+===================================== */
+
+.question-box{
+
+    margin-top:20px;
+}
+
+#questionText{
+
+    margin-bottom:25px;
+
+    font-size:1.3rem;
+}
+
+.answers-container{
+
+    display:grid;
+
+    gap:15px;
+}
+
+.answer-btn{
+
+    background:
+    rgba(255,255,255,.06);
+
+    color:var(--text);
+
+    border:
+    1px solid rgba(255,255,255,.1);
+
+    border-radius:15px;
+
+    padding:15px;
+
+    text-align:left;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.answer-btn:hover{
+
+    border-color:var(--cyan);
+
+    transform:translateX(5px);
+}
+
+.correct{
+
+    background:
+    rgba(34,197,94,.2);
+
+    border-color:
+    var(--success);
+}
+
+.wrong{
+
+    background:
+    rgba(239,68,68,.2);
+
+    border-color:
+    var(--danger);
+}
+
+/* =====================================
+   CONSOLE
+===================================== */
+
+.quiz-console{
+
+    margin-top:25px;
+
+    background:#000;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:
+    1px solid #1f2937;
+}
+
+.console-header{
+
+    background:#111827;
+
+    padding:12px 15px;
+
+    color:#22c55e;
+
+    font-weight:600;
+}
+
+#consoleOutput{
+
+    padding:18px;
+
+    min-height:90px;
+
+    color:#22c55e;
+
+    font-family:
+    Consolas,
+    monospace;
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.quiz-actions{
+
+    margin-top:20px;
+}
+
+#nextBtn,
+#restartBtn{
+
+    background:var(--purple);
+
+    color:white;
+
+    border:none;
+
+    padding:14px 25px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-weight:600;
+}
+
+/* =====================================
+   RESULT SCREEN
+===================================== */
+
+.result-section{
+
+    display:none;
+
+    text-align:center;
+}
+
+#finalScore{
+
+    margin:20px 0;
+
+    font-size:4rem;
+
+    color:var(--cyan);
+}
+
+/* =====================================
+   TABLE
+===================================== */
+
+table{
+
+    width:100%;
+
+    margin-top:20px;
+
+    border-collapse:collapse;
+}
+
+th,
+td{
+
+    padding:15px;
+
+    text-align:left;
+
+    border-bottom:
+    1px solid rgba(255,255,255,.08);
+}
+
+/* =====================================
+   AI SECTION
+===================================== */
+
+input{
+
+    width:100%;
+
+    padding:14px;
+
+    margin:15px 0;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    color:var(--text);
+}
+
+button{
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+}
+
+/* =====================================
+   TOAST
+===================================== */
+
+#toast{
+
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    background:#000;
+
+    color:white;
+
+    padding:15px 20px;
+
+    border-radius:12px;
+
+    display:none;
+
+    z-index:9999;
+
+    box-shadow:
+    0 0 15px var(--cyan);
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .container{
+        padding:15px;
+    }
+
+    .quiz-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .quiz-info{
+        width:100%;
+    }
+}
+
+.hero{
+    position:relative;
+    height:420px;
+    overflow:hidden;
+}
+
+.hero-video{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:-2;
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.20),
+    rgba(0,0,0,.35)
+    );
+
+    z-index:-1;
+}

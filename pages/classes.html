@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Classes Management | Maiamma School ERP</title>
+
+<link rel="stylesheet" href="classes.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <img src="../assets/logo.png" alt="Logo">
+
+            <h2>Maiamma ERP</h2>
+
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="../admin-dashboard.html">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="students.html">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Students
+                </a>
+            </li>
+
+            <li>
+                <a href="teachers.html">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    Teachers
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="classes.html">
+                    <i class="fa-solid fa-school"></i>
+                    Classes
+                </a>
+            </li>
+
+            <li>
+                <a href="subjects.html">
+                    <i class="fa-solid fa-book"></i>
+                    Subjects
+                </a>
+            </li>
+
+            <li>
+                <a href="attendance.html">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Attendance
+                </a>
+            </li>
+
+            <li>
+                <a href="homework.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Homework
+                </a>
+            </li>
+
+            <li>
+                <a href="timetable.html">
+                    <i class="fa-solid fa-clock"></i>
+                    Timetable
+                </a>
+            </li>
+
+            <li>
+                <a href="exams.html">
+                    <i class="fa-solid fa-file-pen"></i>
+                    Exams
+                </a>
+            </li>
+
+            <li>
+                <a href="fees.html">
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                    Fees
+                </a>
+            </li>
+
+            <li>
+                <a href="../login.html" id="logoutBtn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Classes Management</h1>
+
+                <p>Create and Manage School Classes & Sections</p>
+
+            </div>
+
+            <button id="addClassBtn" class="primary-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Class
+
+            </button>
+
+        </header>
+
+        <!-- Summary Cards -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <div>
+
+                    <h3>Total Classes</h3>
+
+                    <h2 id="totalClasses">0</h2>
+
+                </div>
+
+                <i class="fa-solid fa-school card-icon"></i>
+
+            </div>
+
+            <div class="card">
+
+                <div>
+
+                    <h3>Sections</h3>
+
+                    <h2 id="totalSections">0</h2>
+
+                </div>
+
+                <i class="fa-solid fa-layer-group card-icon"></i>
+
+            </div>
+
+            <div class="card">
+
+                <div>
+
+                    <h3>Active Classes</h3>
+
+                    <h2 id="activeClasses">0</h2>
+
+                </div>
+
+                <i class="fa-solid fa-circle-check card-icon"></i>
+
+            </div>
+
+            <div class="card">
+
+                <div>
+
+                    <h3>Class Teachers</h3>
+
+                    <h2 id="assignedTeachers">0</h2>
+
+                </div>
+
+                <i class="fa-solid fa-user-tie card-icon"></i>
+
+            </div>
+
+        </section>
+
+        <!-- Search -->
+
+        <section class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Class, Section or Teacher...">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </section>
+
+        <!-- Classes Table -->
+
+        <section class="table-container">
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <th>#</th>
+
+                    <th>Class</th>
+
+                    <th>Section</th>
+
+                    <th>Class Teacher</th>
+
+                    <th>Room</th>
+
+                    <th>Capacity</th>
+
+                    <th>Status</th>
+
+                    <th>Actions</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody id="classesTableBody">
+
+                    <!-- Firebase Data Here -->
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+                <!-- ================= ADD / EDIT CLASS MODAL ================= -->
+
+        <div class="modal" id="classModal">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h2 id="modalTitle">Add New Class</h2>
+
+                    <span class="close" id="closeModal">&times;</span>
+
+                </div>
+
+                <form id="classForm">
+
+                    <div class="form-group">
+
+                        <label>Class Name</label>
+
+                        <input
+                            type="text"
+                            id="className"
+                            placeholder="Example : Grade 1"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Section</label>
+
+                        <select id="section" required>
+
+                            <option value="">Select Section</option>
+
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                            <option>E</option>
+                            <option>F</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Class Teacher</label>
+
+                        <select id="classTeacher">
+
+                            <option value="">
+                                Select Teacher
+                            </option>
+
+                            <!-- Loaded from Firebase -->
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Room Number</label>
+
+                        <input
+                            type="text"
+                            id="roomNo"
+                            placeholder="101">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Maximum Capacity</label>
+
+                        <input
+                            type="number"
+                            id="capacity"
+                            placeholder="40">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Academic Year</label>
+
+                        <input
+                            type="text"
+                            id="academicYear"
+                            placeholder="2026-2027">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Status</label>
+
+                        <select id="status">
+
+                            <option value="Active">
+                                Active
+                            </option>
+
+                            <option value="Inactive">
+                                Inactive
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-buttons">
+
+                        <button
+                            type="submit"
+                            class="save-btn">
+
+                            <i class="fa-solid fa-floppy-disk"></i>
+
+                            Save Class
+
+                        </button>
+
+                        <button
+                            type="reset"
+                            class="reset-btn">
+
+                            <i class="fa-solid fa-rotate-right"></i>
+
+                            Reset
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <!-- ================= DELETE MODAL ================= -->
+
+        <div class="modal" id="deleteModal">
+
+            <div class="modal-content small">
+
+                <h2>Delete Class</h2>
+
+                <p>
+
+                    Are you sure you want to delete this class?
+
+                </p>
+
+                <div class="delete-buttons">
+
+                    <button
+                        id="confirmDelete"
+                        class="delete-btn">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                        Delete
+
+                    </button>
+
+                    <button
+                        id="cancelDelete"
+                        class="cancel-btn">
+
+                        Cancel
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script type="module" src="classes.js"></script>
+
+</body>
+</html>
