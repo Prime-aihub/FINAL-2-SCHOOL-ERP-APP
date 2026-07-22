@@ -932,3 +932,97 @@ table{
     }
 
 }
+
+/* ==========================
+   FLOATING CALENDAR
+========================== */
+
+.floating-calendar{
+
+    position:fixed;
+
+    right:25px;
+    bottom:25px;
+
+    width:72px;
+    height:72px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary));
+
+    box-shadow:
+    0 0 20px rgba(0,212,255,.55),
+    0 0 40px rgba(124,58,237,.35);
+
+    z-index:999;
+
+    transition:.3s;
+
+    animation:calendarFloat 2.5s ease-in-out infinite;
+}
+
+.floating-calendar img{
+
+    width:38px;
+    height:38px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+}
+
+.floating-calendar:hover{
+
+    transform:scale(1.12);
+
+    box-shadow:
+    0 0 25px rgba(0,212,255,.8),
+    0 0 45px rgba(124,58,237,.6);
+}
+
+@keyframes calendarFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:576px){
+
+    .floating-calendar{
+
+        width:62px;
+        height:62px;
+
+        right:18px;
+        bottom:18px;
+
+    }
+
+    .floating-calendar img{
+
+        width:32px;
+        height:32px;
+
+    }
+
+}
