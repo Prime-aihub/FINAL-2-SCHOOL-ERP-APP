@@ -668,3 +668,131 @@ body{
         padding:20px;
     }
 }
+
+/* ==========================================
+   EXTRA MOBILE RESPONSIVE FIX
+   (Append at the bottom only)
+========================================== */
+
+/* Prevent overflow everywhere */
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+*{
+    min-width:0;
+}
+
+/* Tablet */
+@media (max-width:768px){
+
+    .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+    .topbar-right{
+        width:100%;
+        justify-content:space-between;
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+    .teacher-profile{
+        width:100%;
+    }
+
+    .teacher-profile-card{
+        padding:20px;
+    }
+
+    .teacher-info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .report-table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    .action-btn{
+        width:100%;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:576px){
+
+    /* Hide sidebar completely */
+    .sidebar{
+        display:none;
+    }
+
+    .main-content{
+        margin-left:0;
+        width:100%;
+        padding:15px;
+    }
+
+    .topbar h1{
+        font-size:24px;
+    }
+
+    .topbar p{
+        font-size:14px;
+    }
+
+    .teacher-image img{
+        width:100px;
+        height:100px;
+    }
+
+    .teacher-profile{
+        padding:10px;
+    }
+
+    .teacher-profile img{
+        width:42px;
+        height:42px;
+    }
+
+    .dashboard-card,
+    .stat-card,
+    .teacher-profile-card{
+        padding:18px;
+        border-radius:16px;
+    }
+
+    .subject-score{
+        flex-direction:column;
+        gap:6px;
+        align-items:flex-start;
+    }
+
+    .card-header{
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+    .theme-btn{
+        width:45px;
+        height:45px;
+    }
+
+    .toast{
+        left:10px;
+        right:10px;
+        width:auto;
+    }
+
+}
