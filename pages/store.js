@@ -1,60 +1,67 @@
 const products = [
   {
     id: 1,
-    name: "Creative Art & Craft Kit",
-    category: "Educational Toys",
+    name: "MAIAMMA School T-Shirt",
+    category: "School Merchandise",
     price: 499,
-    image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=700&q=80"
+    image: "images/merch-tshirt.jpg"
   },
   {
     id: 2,
-    name: "Premium Stationery Set",
-    category: "Stationery",
-    price: 299,
-    image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=700&q=80"
+    name: "School Uniform Set",
+    category: "Uniform",
+    price: 1499,
+    image: "images/uniform.jpg"
   },
   {
     id: 3,
-    name: "DIY Robotics STEM Kit",
-    category: "STEM Kits",
-    price: 1299,
-    image: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=700&q=80"
+    name: "Student Stationery Kit",
+    category: "Stationery",
+    price: 299,
+    image: "images/stationery-kit.jpg"
   },
   {
     id: 4,
-    name: "Custom Name School Bag",
-    category: "School Bags",
-    price: 999,
-    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=80"
+    name: "Geometry Box",
+    category: "Stationery",
+    price: 199,
+    image: "images/geometry-box.jpg"
   },
   {
     id: 5,
-    name: "Solar System Learning Model",
-    category: "Educational Toys",
-    price: 699,
-    image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=700&q=80"
+    name: "Science Laboratory Kit",
+    category: "Laboratory",
+    price: 999,
+    image: "images/science-lab-kit.jpg"
   },
   {
     id: 6,
-    name: "Geometry Box Set",
-    category: "Stationery",
-    price: 249,
-    image: "https://images.unsplash.com/photo-1516383607781-913a19294fd1?auto=format&fit=crop&w=700&q=80"
+    name: "Class Textbook Set",
+    category: "Books",
+    price: 1299,
+    image: "images/textbooks.jpg"
   },
   {
     id: 7,
-    name: "Electric Circuit Explorer Kit",
-    category: "STEM Kits",
-    price: 899,
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=700&q=80"
+    name: "STEM & Coding Activity Book",
+    category: "Books",
+    price: 399,
+    image: "images/stem-coding-book.jpg"
   },
   {
     id: 8,
-    name: "Kids Learning Backpack",
-    category: "School Bags",
-    price: 849,
-    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=700&q=80"
+    name: "Sports Activity Handbook",
+    category: "Books",
+    price: 349,
+    image: "images/sports-book.jpg"
   }
+  {
+  id: 9,
+  name: "Custom Name School Bag",
+  category: "School Bags",
+  price: 999,
+  image: "images/custom-school-bag.jpg"
+}
 ];
 
 let selectedCategory = "All";
