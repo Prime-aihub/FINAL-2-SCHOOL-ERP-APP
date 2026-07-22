@@ -46,7 +46,7 @@ const products = [
     name: "STEM & Coding Activity Book",
     category: "Books",
     price: 399,
-    image: "images/stem-coding-book.jpg"
+    image: "images/stem-coding-book.jpeg"
   },
   {
     id: 8,
