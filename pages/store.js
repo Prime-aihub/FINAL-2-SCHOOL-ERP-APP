@@ -54,7 +54,7 @@ const products = [
     category: "Books",
     price: 349,
     image: "images/sports-book.jpg"
-  }
+  },
   {
   id: 9,
   name: "Custom Name School Bag",
